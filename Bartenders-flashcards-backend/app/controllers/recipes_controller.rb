@@ -32,6 +32,17 @@ class RecipesController < ApplicationController
         end
     end
     
+    def destroy
+        @recipe = Recipe.find(params[:id])
+        if @recipe.destroy
+            flash[:success] = 'Recipe was successfully deleted.'
+            render json: {recipeId: @recipe.id}
+        else
+            flash[:error] = 'Something went wrong'
+            render json: @recipe
+        end
+    end
+    
     
     private
     def recipe_params
