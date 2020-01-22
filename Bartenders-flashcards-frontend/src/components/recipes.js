@@ -6,8 +6,18 @@ class Recipes{
         this.fetchAndLoadRecipes()
     }
     fetchAndLoadRecipes(){
-        this.adapter.getRecipes().then(recipes => {
-            console.log(recipes)
-        })
+        this.adapter
+        .getRecipes()
+        .then(recipes => {
+           return console.log(recipes)
+            })
+            .then(() =>{
+                this.render()
+            })
+    }
+
+    render(){
+        const drinksContainer = document.getElementById('drinks-container')
+        drinksContainer.innerHTML = 'Drinks here'
     }
 }
