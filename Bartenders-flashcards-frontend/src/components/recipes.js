@@ -1,23 +1,23 @@
 class Recipes{
     constructor(){
-        this.recipes = []
-        this.adapter = new RecipesAdapter
-        // this.bindEventListeners()
-        this.fetchAndLoadRecipes()
+        this.recipes = [];
+        this.adapter = new RecipesAdapter() ;
+        // this.bindEventListeners();
+        this.fetchAndLoadRecipes();
     }
     fetchAndLoadRecipes(){
         this.adapter
         .getRecipes()
         .then(recipes => {
-           return console.log(recipes)
+           return console.log(recipes);
             })
             .then(() =>{
-                this.render()
-            })
+                this.render();
+            });
     }
 
     render(){
-        const drinksContainer = document.getElementById('drinks-container')
-        drinksContainer.innerHTML = 'Drinks here'
+        const drinksContainer = document.getElementById('drinks-container');
+        drinksContainer.innerHTML = 'Drinks here';
     }
 }
