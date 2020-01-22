@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Recipe.destroy
+Recipe.create([{
+    name: "Shirley Temple"
+    ingrediants: "Grenadine, Lemon-lime soda, Ice, Maraschino cherries (for garnish)."
+    body: "1) Fill the glass with ice, then pour in about 1 ounce of grenadine over the ice. 2) Top the glass off with the lemon lime soda or ginger ale. 3) Don’t forget the cherries! The more, the cherrier."
+
+}])
