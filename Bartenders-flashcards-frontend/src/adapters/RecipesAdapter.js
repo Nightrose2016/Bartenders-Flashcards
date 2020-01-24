@@ -1,6 +1,6 @@
 class RecipesAdapter {
     constructor(){
-        this.baseurl = 'http://localhost:3000';
+        this.baseurl = 'http://localhost:3000/recipes';
     }
     getRecipes(){
         return fetch(this.baseurl)

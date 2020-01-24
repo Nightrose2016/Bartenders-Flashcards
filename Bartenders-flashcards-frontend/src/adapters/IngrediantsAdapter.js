@@ -1,6 +1,6 @@
 class IngrediantsAdapter {
     constructor(){
-        this.baseurl = 'http://localhost:3000';
+        this.baseurl = 'http://localhost:3000/ingrediants';
     }
     getIngrediants(){
         return fetch(this.baseurl)
