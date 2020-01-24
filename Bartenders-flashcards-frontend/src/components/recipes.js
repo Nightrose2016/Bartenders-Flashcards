@@ -19,6 +19,6 @@ class Recipes{
 
     render(){
         const drinksContainer = document.getElementById('drinks-container');
-        drinksContainer.innerHTML = 'Drinks here';
+        drinksContainer.innerHTML = {this.recipes.map(recipe =>`<li>{recipe.body}</li>`).join};
     }
 }
