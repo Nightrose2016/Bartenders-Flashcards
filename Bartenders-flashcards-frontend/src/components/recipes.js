@@ -9,7 +9,7 @@ class Recipes{
         this.adapter
         .getRecipes()
         .then(recipes => {
-            recipe.forEach(recipe => this.recipes.push(recipe))
+            recipe.forEach(recipe => this.recipes.push(recipe));
            return console.log(recipes);
             })
             .then(() =>{
