@@ -7,8 +7,15 @@ class Recipes{
     }
     initBindingsAndEventListeners() {
         this.recipesContainer = document.getElementById('recipes-container');
+        this.recipeForm = document.getElementById('new-recipe-form')
+        this.recipeForm.addEventListener('submit', this.createRecipe)
     }
 
+    createRecipe(e) {
+        e.preventDefault
+        console.log('your drink is being made')
+    }
+    
     fetchAndLoadRecipes(){
         this.adapter
         .getRecipes()
