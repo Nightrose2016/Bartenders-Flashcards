@@ -10,12 +10,12 @@ class RecipesAdapter {
 
     createRecipe(name_value, body_value) {
         const recipe = {
-            name: name_value ;
-            body: body_value ;
-        }
+            name: name_value ,
+            body: body_value ,
+        };
         return fetch(this.baseurl), {
             method: 'post',
             body: JSON.stringify({ recipe }),
-        })
+        } ;
     }
 }
