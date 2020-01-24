@@ -7,7 +7,7 @@ class Recipes{
     }
     initBindingsAndEventListeners() {
         this.recipesContainer = document.getElementById('recipes-container');
-        this.recipesContainer = document.getElementById('new-recipe-name')
+        this.recipesContainer = document.getElementById('new-recipe-name');
         this.newRecipeBody = document.getElementById('new-recipe-body');
         this.recipeForm = document.getElementById('new-recipe-form');
         this.recipeForm.addEventListener('submit', this.createRecipe.bind(this));
