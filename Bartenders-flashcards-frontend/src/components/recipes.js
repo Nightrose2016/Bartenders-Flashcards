@@ -15,6 +15,11 @@ class Recipes{
 
     createRecipe(e) {
         e.preventDefault;
+        const name_value = this.newRecipename.value
+        const body_value = this.newRecipeBody.value
+        
+        this.adapter.createRecipe(name_value)
+        this.adapter.createRecipe(body_value)
         console.log('your drink is being made');
     }
 
