@@ -1,16 +1,16 @@
 class IngrediantsController < ApplicationController
     def index
-        @ingrediants = Ingrediantss.all
+        @ingrediants = Ingrediant.all
         render json: @ingrediants
     end
     
     def def show
-        @ingrediant = Ingrediants.find(params[:id])
+        @ingrediant = Ingrediant.find(params[:id])
         render json: @ingrediant
     end
     
     def create
-        @ingrediant = Ingrediants.new(params[:ingrediants])
+        @ingrediant = Ingrediant.new(params[:ingrediants])
         if @ingrediant.save
             render json: @ingrediant
         else
@@ -21,7 +21,7 @@ class IngrediantsController < ApplicationController
     end
 
     def update
-        @ingrediant = Ingrediants.find(params[:id])
+        @ingrediant = Ingrediant.find(params[:id])
         if @ingrediant.update_attributes(ingrediants_params)
             render json: @ingrediants
         else
@@ -31,7 +31,7 @@ class IngrediantsController < ApplicationController
     end
     
     def destroy
-        @ingrediant = Ingrediants.find(params[:id])
+        @ingrediant = Ingrediant.find(params[:id])
         if @ingrediant.destroy
             flash[:success] = 'ingrediants was successfully deleted.'
             render json: {ingrediantId: @ingrediant.id}
