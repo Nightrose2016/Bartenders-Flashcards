@@ -2,9 +2,13 @@ class Recipes{
     constructor(){
         this.recipes = [];
         this.adapter = new RecipesAdapter() ;
-        // this.bindEventListeners();
+        this.bindingsEventListeners();
         this.fetchAndLoadRecipes();
     }
+    initBindingsAndEventListeners() {
+        this.recipesContainer = document.getElementById('recipes-container');
+    }
+
     fetchAndLoadRecipes(){
         this.adapter
         .getRecipes()
@@ -18,7 +22,6 @@ class Recipes{
     }
 
     render(){
-        const drinksContainer = document.getElementById('drinks-container');
-        drinksContainer.innerHTML = {this.recipes.map(recipe =>`<li>{recipe.body}</li>`).join};
+        recipesContainer.innerHTML = {this.recipes.map(recipe => recipe.renderLI()).join};
     }
 }
