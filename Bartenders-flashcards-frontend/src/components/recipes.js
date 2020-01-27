@@ -20,8 +20,13 @@ class Recipes{
         const body_value = this.newRecipeBody.value ;
         
         this.adapter.createRecipe(name_value) ;
-        this.adapter.createRecipe(body_value) ;
+        this.adapter.createRecipe(body_value).then(recipe => {
+            this.recipes.push(new Recipe(recipe));
+            this.render ;
+        }) ;
+            
         console.log('your drink is being made');
+        
     }
 
     fetchAndLoadRecipes(){
