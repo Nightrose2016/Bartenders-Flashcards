@@ -2,7 +2,7 @@ class Recipes{
     constructor(){
         this.recipes = [];
         this.adapter = new RecipesAdapter() ;
-        this.bindingsEventListeners();
+        this.initBindingsAndEventListeners();
         this.fetchAndLoadRecipes();
     }
     initBindingsAndEventListeners() {
@@ -14,7 +14,7 @@ class Recipes{
     }
 
     createRecipe(e) {
-        e.preventDefault;
+        e.preventDefault();
         
         const name_value = this.newRecipename.value ;
         const body_value = this.newRecipeBody.value ;
@@ -22,7 +22,7 @@ class Recipes{
         this.adapter.createRecipe(name_value) ;
         this.adapter.createRecipe(body_value).then(recipe => {
             this.recipes.push(new Recipe(recipe));
-            this.render ;
+            this.render() ;
         }) ;
             
         console.log('your drink is being made');
