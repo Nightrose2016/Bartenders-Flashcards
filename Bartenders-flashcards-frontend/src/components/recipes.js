@@ -7,7 +7,7 @@ class Recipes{
     }
     initBindingsAndEventListeners() {
         this.recipesContainer = document.getElementById('recipes-container');
-        this.recipesContainer = document.getElementById('new-recipe-name');
+        this.newRecipeName = document.getElementById('new-recipe-name');
         this.newRecipeBody = document.getElementById('new-recipe-body');
         this.recipeForm = document.getElementById('new-recipe-form');
         this.recipeForm.addEventListener('submit', this.createRecipe.bind(this));
@@ -16,7 +16,7 @@ class Recipes{
     createRecipe(e) {
         e.preventDefault();
         
-        const name_value = this.newRecipename.value ;
+        const name_value = this.newRecipeName.value ;
         const body_value = this.newRecipeBody.value ;
         
         this.adapter.createRecipe(name_value) ;
@@ -29,16 +29,18 @@ class Recipes{
         
     }
 
+
     fetchAndLoadRecipes(){
-        this.adapter
-        .getRecipes()
-        .then(recipes => {
-            recipe.forEach(recipe => this.recipes.push(new Recipe(recipe)));
-           return console.log(recipes);
-            })
-            .then(() =>{
-                this.render();
-            });
+        this.adapter.getRecipes()
+
+            .then(console.log (recipes) // => {
+        //     recipe.forEach(recipe => this.recipes.push(new Recipe(recipe)));
+        //    return console.log(recipes);
+        //     })
+        //     .then(() =>{
+        //         this.render();
+        //     });
+        )
     }
 
     render(){
