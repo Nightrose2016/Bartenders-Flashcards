@@ -30,23 +30,23 @@ class Recipes{
     }
 
     handleRecipeClick(e) {
-        this.toggleNote(e)
+        this.toggleNote(e) ;
     }
     
     toggleRecipe(e) {
-        const li = e.target
-        li.contentEditable = true
-        li.focus()
-        li.classList.add('editable')
+        const li = e.target ;
+        li.contentEditable = true ;
+        li.focus() ;
+        li.classList.add('editable') ;
     }
 
     updateRecipe(e) {
-        const li = e.target
-        li.contentEditable = false
-        li.classList.remove('editable')
-        const newValue = li.innerHTML
-        const id = li.dataset.id
-        this.adapter.updateRecipe(newValue, id)
+        const li = e.target ;
+        li.contentEditable = false ;
+        li.classList.remove('editable') ;
+        const newValue = li.innerHTML ;
+        const id = li.dataset.id ;
+        this.adapter.updateRecipe(newValue, id);
       }
     fetchAndLoadRecipes() {
         this.adapter.getRecipes()
