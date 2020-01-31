@@ -28,11 +28,11 @@ class RecipesAdapter {
         } ;
     
         return fetch(`${this.baseUrl}/${id}`, {
-          method: 'PATCH',
-          headers: {
-            'content-type': 'application/json',
-          },
-          body: JSON.stringify({ note }),
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify({ note }),
         }).then(res => res.json()) ;
     }
 }
