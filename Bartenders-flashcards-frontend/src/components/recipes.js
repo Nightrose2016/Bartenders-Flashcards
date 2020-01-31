@@ -31,7 +31,7 @@ class Recipes{
     fetchAndLoadRecipes() {
         this.adapter.getRecipes()
         // .then(recipes => {
-        //     recipes.sort((a, b) => a.id - b.id).forEach(recipe => this.recipes.push(new Recipe(note))) ;
+        //     recipes.sort((a, b) => a.id - b.id).forEach(recipe => this.recipes.push(new Recipe(recipe))) ;
         // }) 
         .then(() => {
             this.render() ;
