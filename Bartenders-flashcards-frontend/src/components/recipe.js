@@ -5,7 +5,7 @@ class Recipe {
         this.body = recipeJSON.body ;
     }
 
-    renderLI() {
-        return `<li>${this.body}</li>`;
-    }
+    renderLi() {
+        return `<li data-id=${this.id}>${this.name}</li>`
+      }
 }
