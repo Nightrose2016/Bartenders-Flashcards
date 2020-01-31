@@ -7,6 +7,7 @@ class Recipes{
     }
     initBindingsAndEventListeners() {
         this.recipesContainer = document.getElementById('recipes-container');
+        this.body = document.querySelector('body')
         this.newRecipeName = document.getElementById('new-recipe-name');
         this.newRecipeBody = document.getElementById('new-recipe-body');
         this.recipeForm = document.getElementById('new-recipe-form');
@@ -39,6 +40,6 @@ class Recipes{
     }
 
     render(){
-        recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderLI()).join('');
+        this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderLI()).join('');
     }
 }
