@@ -29,6 +29,17 @@ class Recipes{
         console.log('your drink is being made');
     }
 
+    handleRecipeClick(e) {
+        this.toggleNote(e)
+    }
+    
+    toggleRecipe(e) {
+        const li = e.target
+        li.contentEditable = true
+        li.focus()
+        li.classList.add('editable')
+    }
+
     updateRecipe(e) {
         const li = e.target
         li.contentEditable = false
