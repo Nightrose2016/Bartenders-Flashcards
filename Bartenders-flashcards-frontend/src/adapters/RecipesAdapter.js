@@ -3,9 +3,7 @@ class RecipesAdapter {
         this.baseurl = 'http://localhost:3000/recipes';
     }
     getRecipes(){
-        return fetch(this.baseurl)
-        .then(res => res.text())
-        .then(text => console.log(text));
+        return fetch(this.baseurl).then(res => res.text());
     }
 
     createRecipe(name_value, body_value) {
@@ -13,9 +11,13 @@ class RecipesAdapter {
             name: name_value ,
             body: body_value ,
         };
-        return fetch(this.baseurl), {
-            method: 'post',
-            body: JSON.stringify({ recipe }),
-        } ;
+ 
+    return fetch(`${this.baseUrl}/${id}`, {
+        method: 'PATCH',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({ recipe }),
+      }).then(res => res.json());
     }
 }
