@@ -23,24 +23,19 @@ class Recipes{
         this.adapter.createRecipe(body_value).then(recipe => {
             this.recipes.push(new Recipe(recipe));
             this.render() ;
-        }) ;
-            
+        }) ;     
         console.log('your drink is being made');
-        
     }
 
-
-    fetchAndLoadRecipes(){
-        this.adapter.getRecipes()
-
-            .then(console.log (recipes) // => {
-        //     recipe.forEach(recipe => this.recipes.push(new Recipe(recipe)));
-        //    return console.log(recipes);
-        //     })
-        //     .then(() =>{
-        //         this.render();
-        //     });
-        )
+    fetchAndLoadRecipes() {
+        this.adapter
+        .getRecipes()
+        .then(recipes => {
+            recipes.sort((a, b) => a.id - b.id).forEach(recipe => this.recipes.push(new Recipe(note)))
+        })
+        .then(() => {
+            this.render()
+        })
     }
 
     render(){
