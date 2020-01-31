@@ -6,6 +6,6 @@ class Recipe {
     }
 
     renderLi() {
-        return `<li data-id=${this.id}>${this.name}</li>`
+        return `<li data-id=${this.id}>${this.name}</li>` ;
       }
 }
