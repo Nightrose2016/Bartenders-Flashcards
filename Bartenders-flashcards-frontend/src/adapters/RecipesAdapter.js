@@ -25,7 +25,7 @@ class RecipesAdapter {
         const recipe = {
             name: name_value,
             body: body_value,
-        }
+        } ;
     
         return fetch(`${this.baseUrl}/${id}`, {
           method: 'PATCH',
@@ -33,6 +33,6 @@ class RecipesAdapter {
             'content-type': 'application/json',
           },
           body: JSON.stringify({ note }),
-        }).then(res => res.json())
+        }).then(res => res.json()) ;
     }
 }
