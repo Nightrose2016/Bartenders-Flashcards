@@ -30,7 +30,7 @@ class Recipes{
     }
 
     handleRecipeClick(e) {
-        this.toggleNote(e) ;
+        this.toggleRecipe(e) ;
     }
     
     toggleRecipe(e) {

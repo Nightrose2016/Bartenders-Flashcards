@@ -32,7 +32,7 @@ class RecipesAdapter {
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify({ note }),
+            body: JSON.stringify({ recipe }),
         }).then(res => res.json()) ;
     }
 }
