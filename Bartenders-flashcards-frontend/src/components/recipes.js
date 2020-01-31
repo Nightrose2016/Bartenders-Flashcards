@@ -19,8 +19,7 @@ class Recipes{
         const name_value = this.newRecipeName.value ;
         const body_value = this.newRecipeBody.value ;
         
-        this.adapter.createRecipe(name_value) ;
-        this.adapter.createRecipe(body_value).then(recipe => {
+        this.adapter.createRecipe(name_value, body_value).then(recipe => {
             this.recipes.push(new Recipe(recipe));
             this.render() ;
         }) ;     
@@ -28,17 +27,16 @@ class Recipes{
     }
 
     fetchAndLoadRecipes() {
-        this.adapter
-        .getRecipes()
-        .then(recipes => {
-            recipes.sort((a, b) => a.id - b.id).forEach(recipe => this.recipes.push(new Recipe(note)))
-        })
+        this.adapter.getRecipes()
+        // .then(recipes => {
+        //     recipes.sort((a, b) => a.id - b.id).forEach(recipe => this.recipes.push(new Recipe(note))) ;
+        // }) 
         .then(() => {
-            this.render()
-        })
+            this.render() ;
+        }) ;
     }
 
     render(){
-        recipesContainer.innerHTML = {this:recipes.map(recipe => recipe.renderLI()).join};
+        recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderLI()).join('');
     }
 }
