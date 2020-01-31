@@ -21,6 +21,8 @@ class Recipes{
         
         this.adapter.createRecipe(name_value, body_value).then(recipe => {
             this.recipes.push(new Recipe(recipe));
+            this.newRecipeName.value = '' ;
+            this.newRecipeBody.value = '' ;
             this.render() ;
         }) ;     
         console.log('your drink is being made');
