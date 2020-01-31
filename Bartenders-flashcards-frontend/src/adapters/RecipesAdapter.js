@@ -20,4 +20,19 @@ class RecipesAdapter {
         body: JSON.stringify({ recipe }),
       }).then(res => res.json());
     }
+
+    updateRecipe(name_value, body_value, id) {
+        const recipe = {
+            name: name_value,
+            body: body_value,
+        }
+    
+        return fetch(`${this.baseUrl}/${id}`, {
+          method: 'PATCH',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({ note }),
+        }).then(res => res.json())
+    }
 }
