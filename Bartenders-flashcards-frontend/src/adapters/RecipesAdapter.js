@@ -13,12 +13,12 @@ class RecipesAdapter {
         };
  
     return fetch(`${this.baseUrl}/${id}`, {
-        method: 'PATCH',
-        headers: {
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify({ recipe }),
-      }).then(res => res.json());
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify({ recipe }),
+        }).then(res => res.json());
     }
 
     updateRecipe(name_value, body_value, id) {
