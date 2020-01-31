@@ -29,6 +29,14 @@ class Recipes{
         console.log('your drink is being made');
     }
 
+    updateRecipe(e) {
+        const li = e.target
+        li.contentEditable = false
+        li.classList.remove('editable')
+        const newValue = li.innerHTML
+        const id = li.dataset.id
+        this.adapter.updateRecipe(newValue, id)
+      }
     fetchAndLoadRecipes() {
         this.adapter.getRecipes()
         // .then(recipes => {
