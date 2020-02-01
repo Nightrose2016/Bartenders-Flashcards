@@ -28,7 +28,7 @@ class RecipesAdapter {
         } ;
     
     
-        return fetch(`${this.baseUrl}/${id}`, {
+        return fetch(`${this.baseurl}/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

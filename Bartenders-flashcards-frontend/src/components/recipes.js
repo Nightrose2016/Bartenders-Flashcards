@@ -12,6 +12,9 @@ class Recipes{
         this.newRecipeBody = document.getElementById('new-recipe-body');
         this.recipeForm = document.getElementById('new-recipe-form');
         this.recipeForm.addEventListener('submit', this.createRecipe.bind(this));
+        this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this))
+        this.body.addEventListener('blur', this.updateRecipe.bind(this), true)
+
     }
 
     createRecipe(e) {
@@ -45,6 +48,7 @@ class Recipes{
         li.contentEditable = false ;
         li.classList.remove('editable') ;
         const newValue = li.innerHTML ;
+        debugger
         const id = li.dataset.id ;
         this.adapter.updateRecipe(newValue, id);
       }
