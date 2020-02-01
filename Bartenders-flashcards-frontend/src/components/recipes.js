@@ -48,7 +48,6 @@ class Recipes{
         li.contentEditable = false ;
         li.classList.remove('editable') ;
         const newValue = li.innerHTML ;
-        debugger
         const id = li.dataset.id ;
         this.adapter.updateRecipe(newValue, id);
       }
