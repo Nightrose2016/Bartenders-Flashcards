@@ -16,7 +16,6 @@ class RecipesController < ApplicationController
             render json: @recipe
         else
             flash[:error] = "Something went wrong"
-            render 'new'
         end
 
     end
