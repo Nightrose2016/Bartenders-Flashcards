@@ -12,8 +12,8 @@ class Recipes{
         this.newRecipeBody = document.getElementById('new-recipe-body');
         this.recipeForm = document.getElementById('new-recipe-form');
         this.recipeForm.addEventListener('submit', this.createRecipe.bind(this));
-        this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this))
-        this.body.addEventListener('blur', this.updateRecipe.bind(this), true)
+        this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this));
+        this.body.addEventListener('blur', this.updateRecipe.bind(this), true);
 
     }
 
@@ -47,9 +47,9 @@ class Recipes{
         const li = e.target ;
         li.contentEditable = false ;
         li.classList.remove('editable') ;
-        const newValue = li.innerHTML ;
+        const newnameValue = document.getElementsByTagName("h4") ;
         const id = li.dataset.id ;
-        this.adapter.updateRecipe(newValue, id);
+        this.adapter.updateRecipe(newnameValue, id);
       }
     fetchAndLoadRecipes() {
         this.adapter.getRecipes()

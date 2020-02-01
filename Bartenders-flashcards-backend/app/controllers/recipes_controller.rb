@@ -21,7 +21,7 @@ class RecipesController < ApplicationController
     end
 
     def update
-        byebug
+        # byebug
         @recipe = Recipe.find(params[:id])
         if @recipe.update_attributes(recipe_params)
             render json: @recipe

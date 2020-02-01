@@ -21,10 +21,10 @@ class RecipesAdapter {
         }).then(res => res.json());
     }
 
-    updateRecipe(name_value, body_value, id) {
+    updateRecipe(newNameValue, newBodyValue, id) {
         const recipe = {
-            name: name_value,
-            body: body_value,
+            name: newNameValue,
+            body: newBodyValue,
         } ;
     
     
