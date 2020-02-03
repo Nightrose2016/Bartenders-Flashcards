@@ -44,12 +44,15 @@ class Recipes{
     }
 
     updateRecipe(e) {
-        const li = e.target ;
+        const li = e.target.parentElement ;
         li.contentEditable = false ;
         li.classList.remove('editable') ;
-        const newnameValue = document.getElementsByTagName("h4") ;
+        const newNameValue = e.target.parentElement.childNodes[1].innerText;
+        const newBodyValue = e.target.parentElement.childNodes[3].innerText;
         const id = li.dataset.id ;
-        this.adapter.updateRecipe(newnameValue, id);
+        debugger
+        console.log(newNameValue, newBodyValue, id) ;
+        this.adapter.updateRecipe(newNameValue, newBodyValue, id);
       }
     fetchAndLoadRecipes() {
         this.adapter.getRecipes()

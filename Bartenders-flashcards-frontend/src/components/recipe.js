@@ -7,7 +7,10 @@ class Recipe {
 
     renderLI() {
         return `<div data-id=${this.id}>
-            <h4>${this.name}</h4>
-            <p>${this.body}</p></div>` ;
+              
+                <h3 data-name=${this.name}>${this.name}</h3>
+            
+                <p class="drink-instruction">${this.body}</p>
+        </div>` ;
         }
 }
