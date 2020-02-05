@@ -56,7 +56,7 @@ class Recipes{
     fetchAndLoadRecipes() {
         this.adapter.getRecipes()
         .then(recipes => {
-            recipes.sort((a, b) => a.id - b.id).forEach(recipe => this.recipes.push(new Recipe(recipe))) ;
+            recipes.sort((a, b) => a.name - b.name).forEach(recipe => this.recipes.push(new Recipe(recipe))) ;
         }) 
         .then(() => {
             this.render() ;
@@ -64,6 +64,7 @@ class Recipes{
     }
 
     render(){
+        debugger
         this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderLI()).join('');
     }
 }
