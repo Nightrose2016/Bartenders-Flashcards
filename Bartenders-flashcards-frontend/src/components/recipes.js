@@ -55,16 +55,13 @@ class Recipes{
       }
     fetchAndLoadRecipes() {
         this.adapter.getRecipes()
-        .then(recipes => {
-            recipes.sort((a, b) => a.name - b.name).forEach(recipe => this.recipes.push(new Recipe(recipe))) ;
-        }) 
+ 
         .then(() => {
             this.render() ;
         }) ;
     }
 
     render(){
-        debugger
         this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderLI()).join('');
     }
 }
