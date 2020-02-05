@@ -50,7 +50,6 @@ class Recipes{
         const newNameValue = e.target.parentElement.childNodes[1].innerText;
         const newBodyValue = e.target.parentElement.childNodes[3].innerText;
         const id = li.dataset.id ;
-        debugger
         console.log(newNameValue, newBodyValue, id) ;
         this.adapter.updateRecipe(newNameValue, newBodyValue, id);
       }
