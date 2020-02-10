@@ -5,6 +5,11 @@ class Ingrediants{
         this.initBindingsAndEventListeners();
         this.fetchAndLoadIngrediants();
     }
+
+    initBindingsAndEventListeners() {
+        this.recipesContainer = document.getElementById('recipes-container');
+    }
+
     fetchAndLoadIngrediants(){
         this.adapter
         .getIngrediants()

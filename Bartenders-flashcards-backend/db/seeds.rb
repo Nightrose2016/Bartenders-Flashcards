@@ -49,5 +49,4 @@ Ingrediant.create([{
 {
     recipe_id: 2,
     name: "Lime Wedge"
-},
-])
+}])
