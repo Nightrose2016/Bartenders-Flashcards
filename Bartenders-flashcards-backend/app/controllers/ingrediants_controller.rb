@@ -10,7 +10,7 @@ class IngrediantsController < ApplicationController
     end
     
     def create
-        @ingrediant = Ingrediant.new(params[:ingrediants])
+        @ingrediant = Ingrediant.new(ingrediants_params)
         if @ingrediant.save
             render json: @ingrediant
         else
@@ -33,17 +33,15 @@ class IngrediantsController < ApplicationController
     def destroy
         @ingrediant = Ingrediant.find(params[:id])
         if @ingrediant.destroy
-            flash[:success] = 'ingrediants was successfully deleted.'
             render json: {ingrediantId: @ingrediant.id}
         else
-            flash[:error] = 'Something went wrong'
             render json: @ingrediant
         end
     end
     
     private
     def ingrediants_params
-        params.require(:ingrediants).permit(:name)
+        params.require(:ingrediants).permit(:name, :recipe_id)
     end
 
 end
