@@ -6,6 +6,7 @@ class Recipe {
     }
 
     renderLI() {
+        console.log("recipes are being rendered") ;
         return `<div data-id=${this.id}>
               
                 <h3 data-name=${this.name}>${this.name}</h3>
