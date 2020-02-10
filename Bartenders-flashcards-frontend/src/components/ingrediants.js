@@ -26,8 +26,8 @@ class Ingrediants{
             });
     }
 
-    render(){
-        const drinksContainer = document.getElementById('drinks-container');
-        drinksContainer.innerHTML = 'Drinks here';
-    }
+    // render(){
+    //     const drinksContainer = document.getElementById('drinks-container');
+    //     drinksContainer.innerHTML = 'Drinks here';
+    // }
 }
