@@ -2,7 +2,7 @@ class Ingrediants{
     constructor(){
         this.Ingrediants = [];
         this.adapter = new IngrediantsAdapter() ;
-        //this.initBindingsAndEventListeners();
+        this.initBindingsAndEventListeners();
         this.fetchAndLoadIngrediants();
     }
     fetchAndLoadIngrediants(){
