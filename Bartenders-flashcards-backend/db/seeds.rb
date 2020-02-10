@@ -6,93 +6,48 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Recipe.delete_all
+Recipe.destroy_all
 Recipe.create([{
     name: "Shirley Temple",
-    body: "1) Fill the glass with ice, then pour in about 1 ounce of grenadine over the ice. 2) Top the glass off with the lemon lime soda or ginger ale. 3) Don’t forget the cherries! The more, the cherrier."
+    body: "1) Fill the glass with ice, then pour in about 1 ounce of grenadine over the ice. 2) Top the glass off with the lemon lime soda. 3) Don’t forget the cherries! The more, the cherrier."
 },
 {
     name: "Rum and Coke",
-    body: "4 oz of cola and 1 2/3 of white rum in a highball glass"
+    body: "4 oz of cola and 2oz of white rum in a highball glass"
 }
 ])
 
-Ingrediant.delete_all
+Ingrediant.destroy_all
 Ingrediant.create([{
-    name: "vodka"
+    recipe_id: 1,
+    name: "1oz. Grenadine"
 },
 {
-    name: "Tonic Water"
+    recipe_id: 1,
+    name: "8oz. Lemon-Lime Soda"
 },
 {
-    name: "Lime Juice"
+    recipe_id: 1,
+    name: "Maraschino cherries"
 },
 {
-    name: "Grenadine"
+    recipe_id: 1,
+    name: "Highball glass"
 },
 {
-    name: "Orange Juice"
+    recipe_id: 2,
+    name: "highball glass"
 },
 {
-    name: "Ginger Ale"
+    recipe_id: 2,
+    name: "2oz. rum"
 },
 {
-    name: "Lemon Juice"
+    recipe_id: 2,
+    name: "4-6oz Coca-Cola"
 },
 {
-    name: "Cranberry Juice"
+    recipe_id: 2,
+    name: "Lime Wedge"
 },
-{
-    name: "Ice"
-},
-{
-    name: "Salt (cocktail)"
-},
-{
-    name: "Club Soda"
-},
-{
-    name: "Sparkling Water"
-},
-{
-    name: "Tobasco Sauce"
-},
-{
-    name: "Maraschino Cherries"
-},
-{
-    name: "Pearl Onions"
-},
-{
-    name: "Whiskey"
-},
-{
-    name: "Tequila"
-},
-{
-    name: "Scotch"
-},
-{
-    name: "Rum"
-},
-{
-    name: "Gin"
-},
-{
-    name: "Cointreau"
-},
-{
-    name: "Brandy"
-},
-{
-    name: "Ameretto"
-},
-{
-    name: "Grand Marnier"
-},
-{
-    name: "Cola"
-},
-{
-    name: "Lemon Lime Soda"
-}])
+])
