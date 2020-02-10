@@ -8,6 +8,11 @@ class Ingrediants{
 
     initBindingsAndEventListeners() {
         this.recipesContainer = document.getElementById('recipes-container');
+        this.newRecipeName = document.getElementById('first-ingrediant-namee');
+        this.newRecipeBody = document.getElementById('second-ingrediant-name');
+        this.newRecipeName = document.getElementById('third-ingrediant-name');
+        this.newRecipeBody = document.getElementById('fourth-ingrediant-name');
+        this.newRecipeBody = document.getElementById('garnish-ingrediant-name');
     }
 
     fetchAndLoadIngrediants(){
