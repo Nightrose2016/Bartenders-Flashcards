@@ -5,12 +5,14 @@ class RecipesAdapter {
     
     getRecipes(){
         return fetch(this.baseurl).then(res => res.json());
+        // looks up the base URL
     }
 
     createRecipe(name_value, body_value) {
         const recipe = {
             name: name_value ,
             body: body_value ,
+            // parses the info from form then submits it
         };
  
         return fetch(this.baseurl, {
@@ -19,13 +21,16 @@ class RecipesAdapter {
                 'content-type': 'application/json',
             },
             body: JSON.stringify({ recipe }),
+            // shows the submited data from above to the page
         }).then(res => res.json());
+
     }
 
     updateRecipe(newNameValue, newBodyValue, id) {
         const recipe = {
             name: newNameValue,
             body: newBodyValue,
+            // parses new data for recipe being edited
         } ;
     
         return fetch(`${this.baseurl}/${id}`, {
@@ -35,5 +40,6 @@ class RecipesAdapter {
             },
             body: JSON.stringify({ recipe }),
         }).then(res => res.json()) ;
+        // shows edited data
     }
 }
