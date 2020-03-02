@@ -56,13 +56,15 @@ class Recipes{
     fetchAndLoadRecipes() {
         this.adapter.getRecipes()
  
-        .then(() => {
+        .then((resp) => {
+            this.recipes = resp.map((obj) => new Recipe(obj)) ;
             this.render() ;
         }) ;
     }
 
     render(){
+      
         this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderLI()).join('');
-        debugger
+        
     }
 }
