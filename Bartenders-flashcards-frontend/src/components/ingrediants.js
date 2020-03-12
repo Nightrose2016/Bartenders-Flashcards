@@ -15,16 +15,6 @@ class Ingrediants{
         this.newIngrediantName = document.getElementById('garnish-ingrediant-name');
     }
 
-    fetchAndLoadIngrediants(){
-        this.adapter
-        .getIngrediants()
-        .then(Ingrediants => {
-           return console.log(Ingrediants);
-            })
-            .then(() =>{
-                this.render();
-            });
-    }
     createingrediant(e) {
         e.preventDefault();
         
@@ -37,7 +27,18 @@ class Ingrediants{
         }) ;
         console.log('ingrediants are being shaken not shtired');
     }
-
+    
+    fetchAndLoadIngrediants(){
+        this.adapter
+        .getIngrediants()
+        .then(Ingrediants => {
+           return console.log(Ingrediants);
+            })
+            .then(() =>{
+                this.render();
+            });
+    }
+    
     render(){
         const ingrediantsContainer = document.getElementsByClassName('drink-ingrediants');
         ingrediantsContainer.innerHTML = 'ingrediants here';
