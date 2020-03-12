@@ -39,7 +39,7 @@ class Ingrediants{
     }
 
     render(){
-        const ingrediantsContainer = document.getElementById('ingrediants-container');
+        const ingrediantsContainer = document.getElementsByClassName('drink-ingrediants');
         ingrediantsContainer.innerHTML = 'ingrediants here';
     }
 }
