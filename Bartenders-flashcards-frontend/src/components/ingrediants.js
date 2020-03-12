@@ -7,7 +7,7 @@ class Ingrediants{
     }
 
     initBindingsAndEventListeners() {
-        this.recipesContainer = document.getElementById('recipes-container');
+        this.ingrediantsContainer = document.getElementsByClassName('drinkiingrediants');
         this.newIngrediantName = document.getElementById('first-ingrediant-name');
         this.newIngrediantName = document.getElementById('second-ingrediant-name');
         this.newIngrediantName = document.getElementById('third-ingrediant-name');
@@ -39,7 +39,6 @@ class Ingrediants{
     }
 
     render(){
-        const ingrediantsContainer = document.getElementsByClassName('drink-ingrediants');
-        ingrediantsContainer.innerHTML = 'ingrediants here';
+        this.ingrediantsContainer.innerHTML = 'ingrediants here';
     }
 }
