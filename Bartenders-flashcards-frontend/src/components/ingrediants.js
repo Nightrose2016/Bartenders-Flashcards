@@ -7,7 +7,7 @@ class Ingrediants{
     }
 
     initBindingsAndEventListeners() {
-        this.ingrediantsContainer = document.getElementsByClassName('drinkiingrediants');
+        this.ingrediantsContainer = document.getElementsByClassName('drink-ingrediants');
         this.newIngrediantName = document.getElementById('first-ingrediant-name');
         this.newIngrediantName = document.getElementById('second-ingrediant-name');
         this.newIngrediantName = document.getElementById('third-ingrediant-name');
