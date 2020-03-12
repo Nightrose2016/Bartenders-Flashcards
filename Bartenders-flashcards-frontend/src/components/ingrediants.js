@@ -29,8 +29,7 @@ class Ingrediants{
     }
     
     fetchAndLoadIngrediants(){
-        this.adapter
-        .getIngrediants()
+        this.adapter.getIngrediants()
         .then(Ingrediants => {
            return console.log(Ingrediants);
             })
@@ -38,7 +37,7 @@ class Ingrediants{
                 this.render();
             });
     }
-    
+
     render(){
         const ingrediantsContainer = document.getElementsByClassName('drink-ingrediants');
         ingrediantsContainer.innerHTML = 'ingrediants here';
