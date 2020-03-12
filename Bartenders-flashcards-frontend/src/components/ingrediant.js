@@ -4,4 +4,8 @@ class Ingrediant {
         this.recipeID = ingrediantJSON.recipe_id ;
         this.name = ingrediantJSON.name ;
     }
+
+    renderLI() {
+        return 'ingrediants will print here'
+    }
 }

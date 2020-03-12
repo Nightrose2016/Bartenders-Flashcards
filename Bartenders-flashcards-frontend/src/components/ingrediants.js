@@ -39,6 +39,7 @@ class Ingrediants{
     }
 
     render(){
-        this.ingrediantsContainer.innerHTML = 'ingrediants here';
+        this.ingrediantsContainer.innerHTML = this.ingrediants.map(ingrediant => ingrediant.renderLI()).join('');;
+        debugger
     }
 }
