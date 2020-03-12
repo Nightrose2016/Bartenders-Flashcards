@@ -20,9 +20,9 @@ class Ingrediants{
         
         const name_value = this.newIngrediantName.value ;
         
-        this.adapter.createingrediant(name_value).then(Ingrediant => {
+        this.adapter.createIngrediant(name_value).then(Ingrediant => {
             this.ingrediant.push(new Ingrediant(ingrediant));
-            this.newingrediantName.value = '' ;
+            this.newIngrediantName.value = '' ;
             this.render() ;
         }) ;
         console.log('ingrediants are being shaken not shtired');
