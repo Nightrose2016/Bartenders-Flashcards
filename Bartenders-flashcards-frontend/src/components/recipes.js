@@ -5,6 +5,7 @@ class Recipes{
         this.initBindingsAndEventListeners();
         this.fetchAndLoadRecipes();
     }
+
     initBindingsAndEventListeners() {
         this.recipesContainer = document.getElementById('recipes-container');
         this.body = document.querySelector('body');
@@ -14,7 +15,6 @@ class Recipes{
         this.recipeForm.addEventListener('submit', this.createRecipe.bind(this));
         this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this));
         this.body.addEventListener('blur', this.updateRecipe.bind(this), true);
-
     }
 
     createRecipe(e) {
@@ -52,10 +52,10 @@ class Recipes{
         const id = li.dataset.id ;
         console.log(newNameValue, newBodyValue, id) ;
         this.adapter.updateRecipe(newNameValue, newBodyValue, id);
-      }
+    }
+
     fetchAndLoadRecipes() {
         this.adapter.getRecipes()
- 
         .then((resp) => {
             this.recipes = resp.map((obj) => new Recipe(obj)) ;
             this.render() ;
