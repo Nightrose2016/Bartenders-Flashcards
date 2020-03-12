@@ -25,6 +25,19 @@ class Ingrediants{
                 this.render();
             });
     }
+    createingrediant(e) {
+        e.preventDefault();
+        
+        const name_value = this.newIngrediantName.value ;
+        
+        this.adapter.createingrediant(name_value).then(Ingrediant => {
+            this.ingrediant.push(new Ingrediant(ingrediant));
+            this.newingrediantName.value = '' ;
+            this.render() ;
+        }) ;
+        console.log('ingrediants are being shaken not shtired');
+    }
+    
 
     // render(){
     //     const drinksContainer = document.getElementById('drinks-container');
