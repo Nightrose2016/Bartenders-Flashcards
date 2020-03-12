@@ -33,9 +33,9 @@ class Ingrediants{
         .then(Ingrediants => {
            return console.log(Ingrediants);
             })
-            .then(() =>{
-                this.render();
-            });
+        .then(() =>{
+            this.render();
+        });
     }
 
     render(){
