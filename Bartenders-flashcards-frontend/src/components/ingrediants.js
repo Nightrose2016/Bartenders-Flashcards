@@ -37,10 +37,9 @@ class Ingrediants{
         }) ;
         console.log('ingrediants are being shaken not shtired');
     }
-    
 
-    // render(){
-    //     const drinksContainer = document.getElementById('drinks-container');
-    //     drinksContainer.innerHTML = 'Drinks here';
-    // }
+    render(){
+        const ingrediantsContainer = document.getElementById('ingrediants-container');
+        ingrediantsContainer.innerHTML = 'ingrediants here';
+    }
 }
