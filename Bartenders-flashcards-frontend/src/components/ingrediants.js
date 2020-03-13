@@ -10,11 +10,12 @@ class Ingrediants{
         this.body = document.querySelector('body');
         this.recipesContainer = document.getElementById('recipes-container');
         this.recipeForm = document.getElementById('new-recipe-form');
-        this.newIngrediantName = document.getElementById('first-ingrediant-name');
-        this.newIngrediantName = document.getElementById('second-ingrediant-name');
-        this.newIngrediantName = document.getElementById('third-ingrediant-name');
-        this.newIngrediantName = document.getElementById('fourth-ingrediant-name');
-        this.newIngrediantName = document.getElementById('garnish-ingrediant-name');
+        this.newIngrediantNameGlass = document.getElementById('glass-type')
+        this.newIngrediantNameOne = document.getElementById('first-ingrediant-name');
+        this.newIngrediantNameTwo = document.getElementById('second-ingrediant-name');
+        this.newIngrediantNameThree = document.getElementById('third-ingrediant-name');
+        this.newIngrediantNameFour = document.getElementById('fourth-ingrediant-name');
+        this.newIngrediantNameGarnish = document.getElementById('garnish-ingrediant-name');
         this.recipeForm.addEventListener('submit', this.createIngrediant.bind(this));
         this.ingrediantsClass = document.getElementsByClassName('drink-ingrediants');
     }
