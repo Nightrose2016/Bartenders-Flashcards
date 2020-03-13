@@ -1,14 +1,14 @@
-class IngrediantsAdapter {
+class IngredientsAdapter {
     constructor(){
-        this.baseurl = 'http://localhost:3000/ingrediants';
+        this.baseurl = 'http://localhost:3000/ingredients';
     }
-    getIngrediants(){
+    getIngredients(){
         return fetch(this.baseurl).then(res => res.json()) ;
         // .then(text => console.log(text));
     }
 
-    createIngrediant(name_value) {
-        const ingrediant = {
+    createIngredient(name_value) {
+        const ingredient = {
             name: name_value
             // parses the info from form then submits it
         };
@@ -18,7 +18,7 @@ class IngrediantsAdapter {
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify({ ingrediant }),
+            body: JSON.stringify({ ingredient }),
             // shows the submited data from above to the page
         }).then(res => res.json());
     }

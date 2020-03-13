@@ -17,8 +17,8 @@ Recipe.create([{
 }
 ])
 
-Ingrediant.destroy_all
-Ingrediant.create([{
+Ingredient.destroy_all
+Ingredient.create([{
     recipe_id: 1,
     name: "1oz. Grenadine"
 },
