@@ -10,8 +10,9 @@ class Recipe {
         return `<div data-id=${this.id}>
               
                 <h3 data-name=${this.name}>${this.name}</h3>
-                    <div class="drink-ingrediants" data-id=${this.id}>
-                    </div>
+
+                    <div class="drink-ingrediants" data-id=${this.id}> ingrediants? </div>
+
                 <p class="drink-instruction">${this.body}</p>
         </div>` ;
         }
