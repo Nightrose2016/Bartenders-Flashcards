@@ -34,18 +34,22 @@ class Ingredients{
     }
     
     fetchAndLoadIngredients(){
-        this.adapter.getIngredients()
+        this.adapter.getIngredients() //getting ingredients from dackend
         .then(Ingredients => {
+            Ingredients.data.forEach(ingredient => {
+                // let something = {...ingredient.attributes, id: ingredient.id} 
+                //     Ingredient.all.push(new Ingredient(something))
+            })
            return console.log(Ingredients);
             })
         .then(() =>{
             this.render();
         });
+        debugger
     }
 
     render(){
-        this.ingredientsClass.innerHTML = 'ingredients will print here';
         
-        // this.ingredients.map(ingredient => ingredient.renderLI()).join('');
+        this.ingredientsClass = this.ingredients.map(ingredient => ingredient.renderLI()).join('');
     }
 }
