@@ -7,15 +7,19 @@ class Ingrediants{
     }
 
     initBindingsAndEventListeners() {
-        this.ingrediantsContainer = document.getElementsByClassName('drink-ingrediants');
+        this.body = document.querySelector('body');
+        this.recipesContainer = document.getElementById('recipes-container');
+        this.recipeForm = document.getElementById('new-recipe-form');
         this.newIngrediantName = document.getElementById('first-ingrediant-name');
         this.newIngrediantName = document.getElementById('second-ingrediant-name');
         this.newIngrediantName = document.getElementById('third-ingrediant-name');
         this.newIngrediantName = document.getElementById('fourth-ingrediant-name');
         this.newIngrediantName = document.getElementById('garnish-ingrediant-name');
+        this.recipeForm.addEventListener('submit', this.createIngrediant.bind(this));
+        this.ingrediantsClass = document.getElementsByClassName('drink-ingrediants');
     }
 
-    createingrediant(e) {
+    createIngrediant(e) {
         e.preventDefault();
         
         const name_value = this.newIngrediantName.value ;
@@ -39,7 +43,7 @@ class Ingrediants{
     }
 
     render(){
-        this.ingrediantsContainer.innerHTML = this.ingrediants.map(ingrediant => ingrediant.renderLI()).join('');
+        this.ingrediantsClass.innerHTML = this.ingrediants.map(ingrediant => ingrediant.renderLI()).join('');
         debugger
     }
 }
