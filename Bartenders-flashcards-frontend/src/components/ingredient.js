@@ -7,6 +7,6 @@ class Ingredient {
 
     renderLI() {
         console.log('ingredients are being mixed');
-        return 'ingredients will print here'
+        return 'ingredients will print here';
     }
 }

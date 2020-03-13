@@ -10,7 +10,7 @@ class Ingredients{
         this.body = document.querySelector('body');
         this.recipesContainer = document.getElementById('recipes-container');
         this.recipeForm = document.getElementById('new-recipe-form');
-        this.newIngredientNameGlass = document.getElementById('glass-type')
+        this.newIngredientNameGlass = document.getElementById('glass-type') ;
         this.newIngredientNameOne = document.getElementById('first-ingredient-name');
         this.newIngredientNameTwo = document.getElementById('second-ingredient-name');
         this.newIngredientNameThree = document.getElementById('third-ingredient-name');
@@ -44,7 +44,7 @@ class Ingredients{
     }
 
     render(){
-        this.ingredientsClass.innerHTML = 'ingredients will print here'
+        this.ingredientsClass.innerHTML = 'ingredients will print here';
         
         // this.ingredients.map(ingredient => ingredient.renderLI()).join('');
     }
