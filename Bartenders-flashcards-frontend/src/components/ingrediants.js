@@ -44,6 +44,7 @@ class Ingrediants{
 
     render(){
         this.ingrediantsClass.innerHTML = this.ingrediants.map(ingrediant => ingrediant.renderLI()).join('');
-        debugger
     }
 }
+
+// fix in·gre·di·ent dummy.  fix later
