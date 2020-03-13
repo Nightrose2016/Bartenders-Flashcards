@@ -49,5 +49,3 @@ class Ingredients{
         // this.ingredients.map(ingredient => ingredient.renderLI()).join('');
     }
 }
-
-// fix in·gre·di·ent dummy.  fix later
