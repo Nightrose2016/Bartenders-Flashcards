@@ -11,7 +11,7 @@ class Recipe {
               
                 <h3 data-name=${this.name}>${this.name}</h3>
 
-                    <div class="drink-ingrediants" data-id=${this.id}> ingrediants? </div>
+                    <div class="drink-ingrediants" data-id=${this.id}> </div>
 
                 <p class="drink-instruction">${this.body}</p>
         </div>` ;
