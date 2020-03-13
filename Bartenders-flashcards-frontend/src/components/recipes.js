@@ -49,6 +49,7 @@ class Recipes{
         li.classList.remove('editable') ;
         const newNameValue = e.target.parentElement.childNodes[1].innerText;
         const newBodyValue = e.target.parentElement.childNodes[3].innerText;
+        // debugger
         const id = li.dataset.id ;
         console.log(newNameValue, newBodyValue, id) ;
         this.adapter.updateRecipe(newNameValue, newBodyValue, id);
