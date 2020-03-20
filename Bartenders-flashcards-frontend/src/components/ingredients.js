@@ -22,7 +22,7 @@ class Ingredients{
 
     createIngredient(e) {
         e.preventDefault();
-        // add the above or switch to an array?
+        // add the above or switch to an array? array would be better as not having all ingrediands would work
         const name_value = this.newIngredientName.value ;
         
         this.adapter.createIngredient(name_value).then(Ingredient => {
@@ -37,8 +37,8 @@ class Ingredients{
         this.adapter.getIngredients() //getting ingredients from dackend
         .then(Ingredients => {
             Ingredients.data.forEach(ingredient => {
-                // let something = {...ingredient.attributes, id: ingredient.id} 
-                //     Ingredient.all.push(new Ingredient(something))
+                let something = {...ingredient.attributes, id: ingredient.id} 
+                    Ingredient.all.push(new Ingredient(something))
             })
            return console.log(Ingredients);
             })
