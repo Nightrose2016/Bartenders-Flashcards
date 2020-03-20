@@ -3,7 +3,6 @@ class Recipes{
         this.recipes = [];
         this.adapter = new RecipesAdapter() ;
         this.initBindingsAndEventListeners();
-        this.fetchAndLoadRecipes();
     }
 
     initBindingsAndEventListeners() {
@@ -55,7 +54,7 @@ class Recipes{
         this.adapter.updateRecipe(newNameValue, newBodyValue, id);
     }
 
-    fetchAndLoadRecipes() {
+    fetchAndLoadRecipes = () => {
         this.adapter.getRecipes()
         .then((resp) => {
             this.recipes = resp.map((obj) => new Recipe(obj)) ;
