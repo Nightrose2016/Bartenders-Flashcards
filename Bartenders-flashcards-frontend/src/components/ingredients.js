@@ -25,11 +25,17 @@ class Ingredients{
         // add the above or switch to an array? array would be better as not having all ingrediands would work
         const name_value = this.newIngredientName.value ;
         
-        this.adapter.createIngredient(name_value).then(Ingredient => {
-            this.ingredient.push(new Ingredient(ingredient));
+        this.adapter.createIngredient(name_value, recipeID).then(Ingredient => {
+            let something = {...review.data.attributes, id: ingrediant.data.id}
+            let newIngrediant = new Ingrediant (something)
+            this.ingredient.push(new Ingredient(newIngredient));
             this.newIngredientName.value = '' ;
-            this.render() ;
+            return newIngrediant
         }) ;
+        .then(ingrediantObj) => {
+            const ul = document.getElementById(recipe-${ingrediantObj.recipe_ID})
+            ul.innerHTML += ingrediantObj.renderLI()
+        })
         console.log('ingredients are being shaken not shtired');
     }
     
@@ -39,6 +45,7 @@ class Ingredients{
             Ingredients.data.forEach(ingredient => {
                 let something = {...ingredient.attributes, id: ingredient.id} 
                     Ingredient.all.push(new Ingredient(something))
+                    })
             })
            return console.log(Ingredients);
             })
