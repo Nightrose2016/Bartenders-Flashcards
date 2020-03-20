@@ -7,10 +7,11 @@ class IngredientsAdapter {
         // .then(text => console.log(text));
     }
 
-    createIngredient(name_value) {
+    createIngredient(name_value, recipe_id) {
         const ingredient = {
-            name: name_value
-            // parses the info from form then submits it
+            name: name_value,
+            recipeID: recipe_id
+        // parses the info from form then submits it
         };
  
         return fetch(this.baseurl, {
