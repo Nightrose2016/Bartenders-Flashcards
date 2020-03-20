@@ -15,6 +15,7 @@ class Ingredients{
         this.newIngredientNameThree = document.getElementById('third-ingredient-name');
         this.newIngredientNameFour = document.getElementById('fourth-ingredient-name');
         this.newIngredientNameGarnish = document.getElementById('garnish-ingredient-name');
+        this.recipeID = document.getElementById(recipeID)
         this.recipeForm.addEventListener('submit', this.createIngredient.bind(this));
         this.ingredientsClass = document.getElementsByClassName('drink-ingredients');
     }
@@ -22,12 +23,12 @@ class Ingredients{
     createIngredient(e) {
         e.preventDefault();
         // add the above or switch to an array? array would be better as not having all ingrediands would work
-        const name_value = this.newIngredientName.value ;
+        // const name_value = this.newIngredientName.value ;
         
         this.adapter.createIngredient(name_value, recipeID)
         .then(Ingredient => {
-            let something = {...review.data.attributes, id: ingrediant.data.id}
-            let newIngrediant = new Ingrediant (something)
+            let something = {...ingredient.data.attributes, id: ingredient.data.id}
+            let newIngrediant = new Ingredient (something)
             this.ingredient.push(new Ingredient(newIngredient));
             this.newIngredientName.value = '' ;
             return newIngrediant
@@ -35,12 +36,12 @@ class Ingredients{
     }
     
     fetchAndLoadIngredients(){
-       return this.adapter.getIngredients() //getting ingredients from dackend
+       return this.adapter.getIngredients() //getting ingredients from backend
         .then(ingredients => {
             return ingredients.forEach(ingredient => {
-                let something = {...ingredient.attributes, id: ingredient.id} 
+                let something = {...ingredient.attributes, id: ingredient.id, recipe_id: ingredient.recipe_id, name: ingredient.name}
                     this.ingredients.push(new Ingredient(something))
-                    })
+                })
             })
             }
     }

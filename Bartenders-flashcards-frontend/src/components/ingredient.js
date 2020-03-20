@@ -6,6 +6,6 @@ class Ingredient {
     }
 
     renderLI() {
-        return `<li>{this.name}</li>`
+        return `<li>${this.name}</li>`
     }
 }
