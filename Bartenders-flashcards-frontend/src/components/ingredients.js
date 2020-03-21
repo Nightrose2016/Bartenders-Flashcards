@@ -9,19 +9,21 @@ class Ingredients{
         this.body = document.querySelector('body');
         this.recipesContainer = document.getElementById('recipes-container');
         this.recipeForm = document.getElementById('new-recipe-form');
-        this.newIngredientNameGlass = document.getElementById('glass-type') ;
-        this.newIngredientNameOne = document.getElementById('first-ingredient-name');
-        this.newIngredientNameTwo = document.getElementById('second-ingredient-name');
-        this.newIngredientNameThree = document.getElementById('third-ingredient-name');
-        this.newIngredientNameFour = document.getElementById('fourth-ingredient-name');
-        this.newIngredientNameGarnish = document.getElementById('garnish-ingredient-name');
+        this.newIngredientArray = Array.from(document.getElementsByClassName('ingredient-name'))
+        // this.newIngredientNameGlass = document.getElementById('glass-type') ;
+        // this.newIngredientNameOne = document.getElementById('first-ingredient-name');
+        // this.newIngredientNameTwo = document.getElementById('second-ingredient-name');
+        // this.newIngredientNameThree = document.getElementById('third-ingredient-name');
+        // this.newIngredientNameFour = document.getElementById('fourth-ingredient-name');
+        // this.newIngredientNameGarnish = document.getElementById('garnish-ingredient-name');
         this.recipeID = document.getElementById(recipeID)
-        this.recipeForm.addEventListener('submit', this.createIngredient.bind(this));
         this.ingredientsClass = document.getElementsByClassName('drink-ingredients');
+        this.recipeForm.addEventListener('submit', this.createIngredient.bind(this))
     }
 
     createIngredient(e) {
         e.preventDefault();
+
         // add the above or switch to an array? array would be better as not having all ingrediands would work
         // const name_value = this.newIngredientName.value ;
         
@@ -41,7 +43,7 @@ class Ingredients{
             return ingredients.forEach(ingredient => {
                 let something = {...ingredient.attributes, id: ingredient.id, recipe_id: ingredient.recipe_id, name: ingredient.name}
                     this.ingredients.push(new Ingredient(something))
-                })
             })
-            }
+        })
     }
+}
