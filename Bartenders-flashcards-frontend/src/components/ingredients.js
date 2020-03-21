@@ -9,13 +9,13 @@ class Ingredients{
         this.body = document.querySelector('body');
         this.recipesContainer = document.getElementById('recipes-container');
         this.recipeForm = document.getElementById('new-recipe-form');
-        this.newIngredientArray = Array.from(document.getElementsByClassName('ingredient-name'))
-        // this.newIngredientNameGlass = document.getElementById('glass-type') ;
-        // this.newIngredientNameOne = document.getElementById('first-ingredient-name');
-        // this.newIngredientNameTwo = document.getElementById('second-ingredient-name');
-        // this.newIngredientNameThree = document.getElementById('third-ingredient-name');
-        // this.newIngredientNameFour = document.getElementById('fourth-ingredient-name');
-        // this.newIngredientNameGarnish = document.getElementById('garnish-ingredient-name');
+        // this.newIngredientArray = Array.from(document.getElementsByClassName('ingredient-name'))
+        this.newIngredientNameGlass = document.getElementById('glass-type') ;
+        this.newIngredientNameOne = document.getElementById('first-ingredient');
+        this.newIngredientNameTwo = document.getElementById('second-ingredient');
+        this.newIngredientNameThree = document.getElementById('third-ingredient');
+        this.newIngredientNameFour = document.getElementById('fourth-ingredient');
+        this.newIngredientNameGarnish = document.getElementById('fifth-ingredient');
         this.recipeID = document.getElementById(recipeID)
         this.ingredientsClass = document.getElementsByClassName('drink-ingredients');
         this.recipeForm.addEventListener('submit', this.createIngredient.bind(this))
@@ -26,7 +26,7 @@ class Ingredients{
 
         // add the above or switch to an array? array would be better as not having all ingrediands would work
         // const name_value = this.newIngredientName.value ;
-        
+
         this.adapter.createIngredient(name_value, recipeID)
         .then(Ingredient => {
             let something = {...ingredient.data.attributes, id: ingredient.data.id}
