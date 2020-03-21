@@ -22,7 +22,8 @@ class Recipes{
         const name_value = this.newRecipeName.value
         const body_value = this.newRecipeBody.value
         
-        this.adapter.createRecipe(name_value, body_value).then(recipe => {
+        this.adapter.createRecipe(name_value, body_value)
+        .then(recipe => {
             this.recipes.push(new Recipe(recipe))
             this.newRecipeName.value = '' 
             this.newRecipeBody.value = '' 
