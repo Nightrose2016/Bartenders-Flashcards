@@ -26,21 +26,21 @@ class RecipesAdapter {
 
     }
 
-    updateRecipe(newNameValue, newBodyValue, id) {
-        const recipe = {
-            name: newNameValue,
-            body: newBodyValue,
-            // parses new data for recipe being edited
-        } ;
+    // updateRecipe(newNameValue, newBodyValue, id) {
+    //     const recipe = {
+    //         name: newNameValue,
+    //         body: newBodyValue,
+    //         // parses new data for recipe being edited
+    //     } ;
     
-        return fetch(`${this.baseurl}/${id}`, {
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify({ recipe }),
-        }).then(res => res.json()) ;
-        // shows edited data
+    //     return fetch(`${this.baseurl}/${id}`, {
+    //         method: 'PATCH',
+    //         headers: {
+    //             'content-type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ recipe }),
+    //     }).then(res => res.json()) 
+    //     // shows edited data
     } 
 
     // deleteRecipe(id) {
