@@ -41,7 +41,7 @@ class RecipesAdapter {
     //         body: JSON.stringify({ recipe }),
     //     }).then(res => res.json()) 
     //     // shows edited data
-    } 
+    // } 
 
     // deleteRecipe(id) {
     //     const recipe = {
