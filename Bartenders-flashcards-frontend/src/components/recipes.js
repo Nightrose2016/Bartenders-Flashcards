@@ -62,6 +62,6 @@ class Recipes{
     }
 
     render(){
-        this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderLI()).join('');
+        this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderDIV()).join('');
     }
 }

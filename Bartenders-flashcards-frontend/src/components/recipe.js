@@ -10,7 +10,7 @@ class Recipe {
     }
 
 
-    renderLI() {
+    renderDIV() {
         console.log("recipes are being rendered") ;
         return `<div data-id=${this.id}>
               
