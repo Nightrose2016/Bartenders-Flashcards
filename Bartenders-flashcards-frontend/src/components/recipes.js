@@ -12,8 +12,8 @@ class Recipes{
         this.newRecipeBody = document.getElementById('new-recipe-body');
         this.recipeForm = document.getElementById('new-recipe-form');
         this.recipeForm.addEventListener('submit', this.createRecipe.bind(this));
-        this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this));
-        this.body.addEventListener('blur', this.updateRecipe.bind(this), true);
+        // this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this));
+        // this.body.addEventListener('blur', this.updateRecipe.bind(this), true);
     }
 
     createRecipe(e) {
@@ -42,16 +42,16 @@ class Recipes{
         li.classList.add('editable') ;
     }
 
-    updateRecipe(e) {
-        const li = e.target.parentElement ;
-        li.contentEditable = false ;
-        li.classList.remove('editable') ;
-        const newNameValue = e.target.parentElement.childNodes[1].innerText;
-        const newBodyValue = e.target.parentElement.childNodes[5].innerText;
-        const id = li.dataset.id ;
-        console.log(newNameValue, newBodyValue, id) ;
-        this.adapter.updateRecipe(newNameValue, newBodyValue, id);
-    }
+    // updateRecipe(e) {
+    //     const li = e.target.parentElement ;
+    //     li.contentEditable = false ;
+    //     li.classList.remove('editable') ;
+    //     const newNameValue = e.target.parentElement.childNodes[1].innerText;
+    //     const newBodyValue = e.target.parentElement.childNodes[5].innerText;
+    //     const id = li.dataset.id ;
+    //     console.log(newNameValue, newBodyValue, id) ;
+    //     this.adapter.updateRecipe(newNameValue, newBodyValue, id);
+    // }
 
     fetchAndLoadRecipes = () => {
         this.adapter.getRecipes()
