@@ -7,12 +7,18 @@ class Recipes{
 
     initBindingsAndEventListeners() {
         this.recipesContainer = document.getElementById('recipes-container')
+        this.formsContainer = document.getElementById('forms-container')
         this.body = document.querySelector('body')
         this.newRecipeName = document.getElementById('new-recipe-name')
         this.newRecipeBody = document.getElementById('new-recipe-body')
-        this.recipeForm = document.getElementById('new-recipe-form')
-        this.recipeForm.addEventListener('submit', this.createRecipe.bind(this))
-        this.recipesContainer.addEventListener('Edit' this.updateRecipe.bind(this))
+        this.newrecipeForm = document.getElementById('new-recipe-form')
+        this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
+        // document.getElementById('add') // not yet implemented
+        document.getElementById('edit').addEventListener("click", this.renderedit)
+        document.getElementById('delete')
+
+        this.updateRecipeForm = document.getElementById('edit-recipe-form')
+        // this.updateRecipeForm.addEventListener('submit', this.updateRecipe.bind(this))
         // this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this))
         // this.body.addEventListener('blur', this.updateRecipe.bind(this), true)
     }
@@ -28,11 +34,20 @@ class Recipes{
             this.recipes.push(new Recipe(recipe))
             this.newRecipeName.value = '' 
             this.newRecipeBody.value = '' 
-            this.render() 
+            this.renderfull() 
         }) ;     
         console.log('your drink is being made')
     }
 
+    updateRecipe(e) {
+        // e.preventDefault()
+        // this.renderedit()
+        // this.adapter.updateRecipe(newNameValue, newBodyValue, id);
+    }
+    
+    deleteRecipe(e) {
+        // e.preventDefault()
+    }
     // handleRecipeClick(e) {
     //     this.toggleRecipe(e) 
     // }
@@ -44,20 +59,20 @@ class Recipes{
     //     li.classList.add('editable') 
     // }
 
-    updateRecipe(e) {
-
-        this.adapter.updateRecipe(newNameValue, newBodyValue, id);
-    }
 
     fetchAndLoadRecipes = () => {
         this.adapter.getRecipes()
         .then((resp) => {
             this.recipes = resp.map((obj) => new Recipe(obj))
-            this.render()
+            this.renderfull()
         }) ;
     }
 
-    render(){
+    renderfull(){
         this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderDIV()).join('')
+    }
+    renderedit(){
+        this.formsContainer.innerHTML = "test?"
+        // recipe => recipe.renderEDIT())
     }
 }
