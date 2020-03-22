@@ -20,13 +20,12 @@ class Recipe {
 
                 <p class="drink-instruction">${this.body}</p>
 
-                <button type="button" > edit recipe</button>
-
-        </div>` ;
+                </div>` ;
     }
 
     renderEDIT() {
         return `Edit drink
+            <form id="edit-recipe-form">
             Drink Name:<input type="text" name="recipe-name" id="edit-recipe-name">
 
             <label for="glass">choose a glass:</label>
@@ -54,8 +53,9 @@ class Recipe {
             <input type="text" placeholder="ingredient and measurment" id="third-ingredient" class="new-ingredient">
             <input type="text" placeholder="ingredient and measurment" id="fourth-ingredient"class="new-ingredient">
             <input type="text" placeholder="ingredient and measurment" id="fifth-ingredient" class="new-ingredient"></input>
+            <input type="hidden" name="recipeID" id="recipeID">
             Recipe Body:<input type="text" name="recipe-body" placeholder="Instructions" id="edit-recipe-body"><br>
-            <input type="submit" value="edit recipe" id="submit">
-            `
+            <input type="submit" value="edit recipe" id="submit-update">
+            </form>`
     }
 }
