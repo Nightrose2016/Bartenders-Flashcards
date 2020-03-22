@@ -8,11 +8,11 @@ class Ingredients{
     initBindingsAndEventListeners() {
         this.body = document.querySelector('body');
         this.recipesContainer = document.getElementById('recipes-container');
-        this.recipeForm = document.getElementById('new-recipe-form');
+        // this.recipeForm = document.getElementById('new-recipe-form');
         this.newIngredientNameClass = document.getElementsByClassName('new-ingredient')
-        this.recipeID = document.getElementById(recipeID)
+        // this.recipeID = document.getElementById(recipeID)
         this.ingredientsClass = document.getElementsByClassName('drink-ingredients');
-        this.recipeForm.addEventListener('submit', this.createIngredient.bind(this))
+        // this.recipeForm.addEventListener('submit', this.createIngredient.bind(this))
     }
 
     createIngredient(e) {
@@ -28,6 +28,7 @@ class Ingredients{
         .then(Ingredient => {
         }) ;
     }
+
     
     fetchAndLoadIngredients(){
        return this.adapter.getIngredients() //getting ingredients from backend
