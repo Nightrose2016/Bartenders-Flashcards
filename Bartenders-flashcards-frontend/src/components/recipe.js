@@ -9,23 +9,18 @@ class Recipe {
         return app.ingredients.ingredients.filter(ingredient => ingredient.recipeID === this.id)
     }
 
-
     renderDIV() {
         console.log("recipes are being rendered") ;
         return `<div data-id=${this.id}>
-              
                 <h3 data-name=${this.name}>${this.name}</h3>
-
                     <div class="drink-ingredients" data-id=${this.id}> ${this.ingredients().map(ingredient => ingredient.renderLI()).join('')}</div>
-
                 <p class="drink-instruction">${this.body}</p>
-
                 </div>` ;
     }
 
     renderEDIT() {
         return `Edit drink
-            <form id="edit-recipe-form">
+            <form class="edit-recipe-form">
             Drink Name:<input type="text" name="recipe-name" id="edit-recipe-name">
 
             <label for="glass">choose a glass:</label>
