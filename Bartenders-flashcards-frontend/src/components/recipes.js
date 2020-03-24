@@ -3,17 +3,18 @@ class Recipes{
         this.recipes = []
         this.adapter = new RecipesAdapter() 
         this.initBindingsAndEventListeners()
+        // this.recipesContainer = RecipeContainers
         // this.
     }
 
     initBindingsAndEventListeners() {
         // this.body = document.querySelector('body')
-        // this.recipesContainer = document.getElementById('recipes-container') //try making variable declaration in index
+        this.recipesContainer = document.getElementById('recipes-container') //try making variable declaration in index
         // const formsContainer = document.getElementById('forms-container')
         this.newRecipeName = document.getElementById('new-recipe-name')
         this.newRecipeBody = document.getElementById('new-recipe-body')
         // this.newrecipeForm = document.getElementById('new-recipe-form')
-        this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
+        // this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
         // document.getElementById('add') // not yet implemented
         // document.getElementById('edit-drink').addEventListener('click', function(e){
         //         formsContainer.innerHTML = Recipe.renderEDIT()
