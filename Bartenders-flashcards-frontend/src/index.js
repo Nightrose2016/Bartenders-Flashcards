@@ -12,7 +12,7 @@ this.recipesContainer = document.getElementById('recipes-container')
 editdrinks.addEventListener('click', renderEditDrinks)
 
 
-funtion renderEditDrinks(){
+function renderEditDrinks() { 
     formsContainer.innerHTML = Recipe.renderEDIT()
 }
 
