@@ -6,8 +6,8 @@ class Ingredients{
     }
 
     initBindingsAndEventListeners() {
-        this.body = document.querySelector('body');
-        this.recipesContainer = document.getElementById('recipes-container');
+        // this.body = document.querySelector('body');
+        // this.recipesContainer = document.getElementById('recipes-container');
         // this.recipeForm = document.getElementById('new-recipe-form');
         this.newIngredientNameClass = document.getElementsByClassName('new-ingredient')
         // this.recipeID = document.getElementById(recipeID)
