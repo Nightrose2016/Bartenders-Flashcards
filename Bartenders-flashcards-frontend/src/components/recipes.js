@@ -6,16 +6,18 @@ class Recipes{
     }
 
     initBindingsAndEventListeners() {
-        this.recipesContainer = document.getElementById('recipes-container')
-        this.formsContainer = document.getElementById('forms-container')
         this.body = document.querySelector('body')
+        this.recipesContainer = document.getElementById('recipes-container') //try making variable declaration in index
+        const formsContainer = document.getElementById('forms-container')
         this.newRecipeName = document.getElementById('new-recipe-name')
         this.newRecipeBody = document.getElementById('new-recipe-body')
         this.newrecipeForm = document.getElementById('new-recipe-form')
         this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
         // document.getElementById('add') // not yet implemented
-        document.getElementById('edit').addEventListener("click", this.renderedit)
-        document.getElementById('delete')
+        // document.getElementById('edit-drink').addEventListener('click', function(e){
+        //         formsContainer.innerHTML = Recipe.renderEDIT()
+        })
+        // document.getElementById('delete-drink')
 
         this.updateRecipeForm = document.getElementById('edit-recipe-form')
         // this.updateRecipeForm.addEventListener('submit', this.updateRecipe.bind(this))
@@ -68,11 +70,13 @@ class Recipes{
         }) ;
     }
 
-    renderfull(){
+    renderfull() {
         this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderDIV()).join('')
     }
-    renderedit(){
-        this.formsContainer.innerHTML = "test?"
-        // recipe => recipe.renderEDIT())
-    }
+
+    // renderedit() {
+    //     // e.preventDefault()
+    //     // debugger
+    //     this.formsContainer.innerHTML += recipe.renderEDIT()
+    // }
 }
