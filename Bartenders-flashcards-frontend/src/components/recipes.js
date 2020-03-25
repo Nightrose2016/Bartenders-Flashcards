@@ -8,21 +8,16 @@ class Recipes{
     }
 
     initBindingsAndEventListeners() {
+        this.body = document.querySelector('body')
         this.recipesContainer = document.getElementById('recipes-container') //try making variable declaration in index
         this.newRecipeName = document.getElementById('new-recipe-name')
         this.newRecipeBody = document.getElementById('new-recipe-body')
         this.updateRecipeForm = document.getElementById('edit-recipe-form')
-        // this.body = document.querySelector('body')
-        // const formsContainer = document.getElementById('forms-container')
         this.newrecipeForm = document.getElementById('new-recipe-form')
         this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
+        document.getElementsByClassName('edit-drink').addEventListener('click', this.updateRecipe)
         // document.getElementById('add') // not yet implemented
-        document.getElementById('edit-drink').addEventListener('click', this.updateRecipe)
         // document.getElementById('delete-drink') // not yet implemented
-
-        // this.updateRecipeForm.addEventListener('submit', this.updateRecipe.bind(this))
-        // this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this))
-        // this.body.addEventListener('blur', this.updateRecipe.bind(this), true)
     }
 
     createRecipe(e) {
@@ -42,9 +37,9 @@ class Recipes{
     }
 
     updateRecipe(e) {
-        cons recipeID = [...] // dataset by query selector
-        this.dataset.innerHTML = test?
-
+        var recipeID = document.queryselector('edit-drink') // dataset by query selector
+        // this.dataset.innerHTML = test?
+        console.log(recipeID)
         // this.adapter.updateRecipe(newNameValue, newBodyValue, id);
     }
     
