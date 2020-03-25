@@ -14,13 +14,11 @@ class Recipes{
         this.updateRecipeForm = document.getElementById('edit-recipe-form')
         // this.body = document.querySelector('body')
         // const formsContainer = document.getElementById('forms-container')
-        // this.newrecipeForm = document.getElementById('new-recipe-form')
-        // this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
+        this.newrecipeForm = document.getElementById('new-recipe-form')
+        this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
         // document.getElementById('add') // not yet implemented
-        // document.getElementById('edit-drink').addEventListener('click', function(e){
-        //         formsContainer.innerHTML = Recipe.renderEDIT()
-        // document.getElementById('delete-drink')
-        // })
+        document.getElementById('edit-drink').addEventListener('click', this.updateRecipe)
+        // document.getElementById('delete-drink') // not yet implemented
 
         // this.updateRecipeForm.addEventListener('submit', this.updateRecipe.bind(this))
         // this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this))
@@ -44,8 +42,9 @@ class Recipes{
     }
 
     updateRecipe(e) {
-        // e.preventDefault()
-        // this.renderedit()
+        cons recipeID = [...]
+        this.dataset.innerHTML = test?
+
         // this.adapter.updateRecipe(newNameValue, newBodyValue, id);
     }
     
