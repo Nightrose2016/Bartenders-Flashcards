@@ -17,7 +17,7 @@ class Recipe {
                 <p class="drink-instruction">${this.body}</p>
                 <button id="edit-drink" data-id=${this.id}> edit ${this.name} </button>
                 <button id="delete-drink" data-id=${this.id}> delete ${this.name} </button>
-                </div> '
+                </div> `
     }
 
     renderEDIT() {
