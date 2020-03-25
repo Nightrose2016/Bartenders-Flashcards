@@ -42,7 +42,7 @@ class Recipes{
     }
 
     updateRecipe(e) {
-        cons recipeID = [...]
+        cons recipeID = [...] // dataset by query selector
         this.dataset.innerHTML = test?
 
         // this.adapter.updateRecipe(newNameValue, newBodyValue, id);

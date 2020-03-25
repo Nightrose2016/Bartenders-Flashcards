@@ -2,6 +2,8 @@ class IngredientsAdapter {
     constructor(){
         this.baseurl = 'http://localhost:3000/ingredients';
     }
+
+    // serialize later
     getIngredients(){
         return fetch(this.baseurl).then(res => res.json()) ;
         // .then(text => console.log(text));
