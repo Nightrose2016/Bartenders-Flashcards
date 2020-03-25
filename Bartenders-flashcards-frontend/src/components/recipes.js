@@ -18,8 +18,8 @@ class Recipes{
         // document.getElementById('add') // not yet implemented
         // document.getElementById('edit-drink').addEventListener('click', function(e){
         //         formsContainer.innerHTML = Recipe.renderEDIT()
-        // })
         // document.getElementById('delete-drink')
+        // })
 
         this.updateRecipeForm = document.getElementById('edit-recipe-form')
         // this.updateRecipeForm.addEventListener('submit', this.updateRecipe.bind(this))
