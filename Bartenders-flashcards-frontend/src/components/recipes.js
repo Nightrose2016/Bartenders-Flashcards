@@ -8,11 +8,12 @@ class Recipes{
     }
 
     initBindingsAndEventListeners() {
-        // this.body = document.querySelector('body')
         this.recipesContainer = document.getElementById('recipes-container') //try making variable declaration in index
-        // const formsContainer = document.getElementById('forms-container')
         this.newRecipeName = document.getElementById('new-recipe-name')
         this.newRecipeBody = document.getElementById('new-recipe-body')
+        this.updateRecipeForm = document.getElementById('edit-recipe-form')
+        // this.body = document.querySelector('body')
+        // const formsContainer = document.getElementById('forms-container')
         // this.newrecipeForm = document.getElementById('new-recipe-form')
         // this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
         // document.getElementById('add') // not yet implemented
@@ -21,7 +22,6 @@ class Recipes{
         // document.getElementById('delete-drink')
         // })
 
-        this.updateRecipeForm = document.getElementById('edit-recipe-form')
         // this.updateRecipeForm.addEventListener('submit', this.updateRecipe.bind(this))
         // this.recipesContainer.addEventListener('dblclick', this.handleRecipeClick.bind(this))
         // this.body.addEventListener('blur', this.updateRecipe.bind(this), true)
@@ -79,6 +79,6 @@ class Recipes{
     // renderedit() {
     //     // e.preventDefault()
     //     // debugger
-    //     this.formsContainer.innerHTML += recipe.renderEDIT()
+    //     this.formsContainer.innerHTML = recipe.renderEDIT()
     // }
 }
