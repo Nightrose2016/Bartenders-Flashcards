@@ -43,13 +43,13 @@ class RecipesAdapter {
     //     // shows edited data
     // } 
 
-    // deleteRecipe(id) {
-    //     const recipe = {
-    //         id: id
-    //     } ;
+    deleteRecipe(id) {
+        const recipe = {
+            id: id
+        } ;
             
-    //     return fetch(`${this.baseurl}/${id}` , {
-    //         method: 'DELETE'    
-    //     }).then(res => res.json());
-    // }
+        return fetch(`${this.baseurl}/${id}` , {
+            method: 'DELETE'    
+        }).then(res => res.json());
+    }
 }

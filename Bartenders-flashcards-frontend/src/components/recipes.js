@@ -15,11 +15,14 @@ class Recipes{
         this.updateRecipeForm = document.getElementById('edit-recipe-form')
         this.newrecipeForm = document.getElementById('new-recipe-form')
         this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
-        document.getElementsByClassName('edit-drink').addEventListener('click', this.updateRecipe)
-        // document.getElementById('add') // not yet implemented
-        // document.getElementById('delete-drink') // not yet implemented
+        this.editdrink = document.getElementsByClassName('edit-drink')
+        this.recipesContainer.addEventListener('click')
+        
+        // var recipeID = this.recipesContainer.queryselector('data-id')
+        this.recipesContainer.addEventListener('click', this.deleteRecipe)
     }
 
+    
     createRecipe(e) {
         e.preventDefault()
         
@@ -36,27 +39,21 @@ class Recipes{
         console.log('your drink is being made')
     }
 
-    updateRecipe(e) {
-        var recipeID = document.queryselector('edit-drink') // dataset by query selector
+    updateRecipe() {
+        // var recipeID = document.queryselector('edit-drink') // dataset by query selector
+
         // this.dataset.innerHTML = test?
-        console.log(recipeID)
+        // console.log(recipeID)
+        // const newname = 
         // this.adapter.updateRecipe(newNameValue, newBodyValue, id);
     }
     
-    deleteRecipe(e) {
-        // e.preventDefault()
+    deleteRecipe = (e)  => {
+        if (e.target.className == "delete-drink") {
+            let id = e.target.dataset.id
+            this.adapter.deleteRecipe(id)
+        }
     }
-    // handleRecipeClick(e) {
-    //     this.toggleRecipe(e) 
-    // }
-    
-    // toggleRecipe(e) {
-    //     const li = e.target
-    //     li.contentEditable = true 
-    //     li.focus()
-    //     li.classList.add('editable') 
-    // }
-
 
     fetchAndLoadRecipes = () => {
         this.adapter.getRecipes()
