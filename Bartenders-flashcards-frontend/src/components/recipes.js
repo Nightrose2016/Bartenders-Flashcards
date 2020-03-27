@@ -16,13 +16,41 @@ class Recipes{
         this.newrecipeForm = document.getElementById('new-recipe-form')
         this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
         this.editdrink = document.getElementsByClassName('edit-drink')
-        this.recipesContainer.addEventListener('click')
+        this.body.addEventListener('click', this.sortRecipes)
         
         // var recipeID = this.recipesContainer.queryselector('data-id')
         this.recipesContainer.addEventListener('click', this.deleteRecipe)
     }
 
-    
+    sortRecipes = (e) =>{
+        if (e.target.id == "sort-recipes") {
+            this.recipes = this.recipes.sort(function(a, b) {
+                // debugger
+                
+                var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+                var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+                if (nameA < nameB) {
+                  return -1;
+                }
+                if (nameA > nameB) {
+                  return 1;
+                }
+              
+                // names must be equal
+                return 0;
+            })
+            this.renderfull()
+        }
+        // recipe => this.recipes.push(new Recipe(recipe)
+    }
+
+    deleteRecipe = (e)  => {
+        if (e.target.className == "delete-drink") {
+            let id = e.target.dataset.id
+            this.adapter.deleteRecipe(id)
+        }
+    }
+        
     createRecipe(e) {
         e.preventDefault()
         
@@ -48,12 +76,6 @@ class Recipes{
         // this.adapter.updateRecipe(newNameValue, newBodyValue, id);
     }
     
-    deleteRecipe = (e)  => {
-        if (e.target.className == "delete-drink") {
-            let id = e.target.dataset.id
-            this.adapter.deleteRecipe(id)
-        }
-    }
 
     fetchAndLoadRecipes = () => {
         this.adapter.getRecipes()
