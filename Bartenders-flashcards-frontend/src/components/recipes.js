@@ -20,6 +20,7 @@ class Recipes{
         
         // var recipeID = this.recipesContainer.queryselector('data-id')
         this.recipesContainer.addEventListener('click', this.deleteRecipe)
+        this.recipesContainer.addEventListener('click', this.updateRecipe)
     }
 
     sortRecipes = (e) =>{
@@ -41,7 +42,6 @@ class Recipes{
             })
             this.renderfull()
         }
-        // recipe => this.recipes.push(new Recipe(recipe)
     }
 
     deleteRecipe = (e)  => {
@@ -53,10 +53,11 @@ class Recipes{
     
     updateRecipe = (e) => {
         if (e.target.className == "edit-drink") {
-            let id= e.target.dataset.id
-            this.adapter.updateRecipe(id)
+            let id = e.target.dataset.id
+            this.adapter.updateRecipe(id, updateName, updateBody)
         }
     }
+
     createRecipe(e) {
         e.preventDefault()
         
@@ -91,5 +92,4 @@ class Recipes{
     //     // e.preventDefault()
     //     // debugger
     //     this.formsContainer.innerHTML = recipe.renderEDIT()
-    // }
 }
