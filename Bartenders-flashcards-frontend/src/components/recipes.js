@@ -13,7 +13,7 @@ class Recipes{
         this.newRecipeName = document.getElementById('new-recipe-name')
         this.newRecipeBody = document.getElementById('new-recipe-body')
         this.updateRecipeForm = document.getElementById('edit-recipe-form')
-        this.newrecipeForm = document.getElementById('new-recipe-form')
+        this.newrecipeForm = document.getElementById('newrecipeform')
         this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
         this.editdrink = document.getElementsByClassName('edit-drink')
         this.body.addEventListener('click', this.sortRecipes)
