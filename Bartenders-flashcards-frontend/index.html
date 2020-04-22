@@ -9,8 +9,11 @@
 </head>
 <body>
     <div class="container">
-       
-        <form id="new-recipe-form">
+        <button type="button" onclick="newrecipeform(1)" id="New Drink" value="Add a Drink">add a drink</button>
+        <!-- <button type="button" onclick="newrecipe-form(1)" id="Update Drink" value="Update Product">update</button> -->
+        <button type="button" onclick="newrecipeform(0)" id="update" value="Hide form">hide add drink form</button>
+
+        <form id="newrecipeform" action="">
             <h1>New Drink</h1>
             Drink Name:<input type="text" name="recipe-name" id="new-recipe-name">
             Recipe Body:<input type="text" name="recipe-body" placeholder="Instructions" id="new-recipe-body"><br>
@@ -39,6 +42,19 @@
 <script src="src/components/ingredients.js"></script>
 <script src="src/adapters/IngredientsAdapter.js"></script>
 <script src="src/index.js"></script>
+
+<script type="text/javascript">
+    window.onload = function() {
+      document.getElementById("newrecipeform").style.display = "none";
+    };
+    function newrecipeform(a) {
+        if (a == 1) {
+            document.getElementById("newrecipeform").style.display = "block";
+        } else {
+            document.getElementById("newrecipeform").style.display = "none";
+        }
+    }
+</script>
   
 </body>
 </html>
