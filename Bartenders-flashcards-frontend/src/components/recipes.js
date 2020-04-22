@@ -50,7 +50,13 @@ class Recipes{
             this.adapter.deleteRecipe(id)
         }
     }
-        
+    
+    updateRecipe = (e) => {
+        if (e.target.className == "edit-drink") {
+            let id= e.target.dataset.id
+            this.adapter.updateRecipe(id)
+        }
+    }
     createRecipe(e) {
         e.preventDefault()
         
@@ -67,14 +73,6 @@ class Recipes{
         console.log('your drink is being made')
     }
 
-    updateRecipe() {
-        // var recipeID = document.queryselector('edit-drink') // dataset by query selector
-
-        // this.dataset.innerHTML = test?
-        // console.log(recipeID)
-        // const newname = 
-        // this.adapter.updateRecipe(newNameValue, newBodyValue, id);
-    }
     
 
     fetchAndLoadRecipes = () => {
