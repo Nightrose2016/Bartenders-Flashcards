@@ -20,8 +20,6 @@ class Recipes{
         this.updateRecipeName = document.getElementById("edit-recipe-name")
         this.updateRecipeBody = document.getElementById("edit-recipe-body")
         this.updateRecipeForm.addEventListener('submit', this.updateRecipe.bind(this))
-        
-        // var recipeID = this.recipesContainer.queryselector('data-id')
         this.recipesContainer.addEventListener('click', this.deleteRecipe)
         this.recipesContainer.addEventListener('click', this.updateRecipe)
     }
@@ -60,7 +58,6 @@ class Recipes{
         const updateName = this.updateRecipeName
         const updateBody = this.updateRecipeBody
         this.adapter.updateRecipe(id, updateName, updateBody)
- 
     }
 
     createRecipe(e) {
@@ -79,8 +76,6 @@ class Recipes{
         console.log('your drink is being made')
     }
 
-    
-
     fetchAndLoadRecipes = () => {
         this.adapter.getRecipes()
         .then((resp) => {
@@ -92,9 +87,4 @@ class Recipes{
     renderfull() {
         this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderDIV()).join('')
     }
-
-    // renderedit() {
-    //     // e.preventDefault()
-    //     // debugger
-    //     this.formsContainer.innerHTML = recipe.renderEDIT()
 }
