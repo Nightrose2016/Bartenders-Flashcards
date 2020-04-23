@@ -9,16 +9,26 @@
 </head>
 <body>
     <div class="container">
-        <button type="button" onclick="newrecipeform(1)" id="New Drink" value="Add a Drink">add a drink</button><br><br>
+        <button type="button" onclick="newrecipeform(1)" id="New Drink" value="Add a Drink">add a drink</button>
         <!-- <button type="button" onclick="newrecipe-form(1)" id="Update Drink" value="Update Product">update</button> -->
-        
+        <button type="button" onclick="editrecipeform(1)" id="Edit-Drink" value="Edit a Drink">Edit a drink</button><br><br>
+
         <form id="newrecipeform" action="">
-            <button type="button" onclick="newrecipeform(0)" id="update" value="Hide form">hide add drink form</button><br>
-            <h1>New Drink</h1>
-            Drink Name:<input type="text" name="recipe-name" id="new-recipe-name">
+            <button type="button" onclick="newrecipeform(0)" id="new-update" value="Hide form">hide add drink</button><br>
+            <h1>New Drink</h1><br>
+            Drink Name:<input type="text" name="recipe-name" id="new-recipe-name"><br>
             Recipe Body:<input type="text" name="recipe-body" placeholder="Instructions" id="new-recipe-body"><br>
             <input type="submit" value="submit recipe" id="submit">
-        </form>  
+        </form> 
+
+        <form id="editrecipeform" action="">
+            <button type="button" onclick="editrecipeform(0)" id="edit-update" value="Hide edit form">hide edit drink</button><br>
+            <h1>Edit Drink</h1>
+            Select drink to edit: <br>
+            Update Drink Name:<input type="text" name="recipe-name" id="edit-recipe-name"><br>
+            Update Recipe Body:<input type="text" name="recipe-body" placeholder="Instructions" id="edit-recipe-body"><br>
+            <input type="submit" value="update recipe" id="update submit">
+        </form>
         </div>
         
         <!-- refactor add recipe form into a button rendered element -->
@@ -46,6 +56,7 @@
 <script type="text/javascript">
     window.onload = function() {
       document.getElementById("newrecipeform").style.display = "none";
+      document.getElementById("editrecipeform").style.display = "none";
     };
     function newrecipeform(a) {
         if (a == 1) {
@@ -54,7 +65,13 @@
             document.getElementById("newrecipeform").style.display = "none";
         }
     }
+    function editrecipeform(a) {
+        if (a == 1) {
+            document.getElementById("editrecipeform").style.display = "block";
+        } else {
+            document.getElementById("editrecipeform").style.display = "none";
+        }
+    }
 </script>
-  
 </body>
 </html>
