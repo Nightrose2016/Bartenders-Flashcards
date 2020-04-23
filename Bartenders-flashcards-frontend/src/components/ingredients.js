@@ -19,7 +19,6 @@ class Ingredients{
         .then(Ingredient => {
         }) ;
     }
-
     
     fetchAndLoadIngredients(){
        return this.adapter.getIngredients() //getting ingredients from backend
