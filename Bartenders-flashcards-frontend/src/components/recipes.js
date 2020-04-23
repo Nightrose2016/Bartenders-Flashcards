@@ -12,11 +12,14 @@ class Recipes{
         this.recipesContainer = document.getElementById('recipes-container') //try making variable declaration in index
         this.newRecipeName = document.getElementById('new-recipe-name')
         this.newRecipeBody = document.getElementById('new-recipe-body')
-        this.updateRecipeForm = document.getElementById('edit-recipe-form')
+        this.updateRecipeForm = document.getElementById('editrecipeform')
         this.newrecipeForm = document.getElementById('newrecipeform')
         this.newrecipeForm.addEventListener('submit', this.createRecipe.bind(this))
         this.editdrink = document.getElementsByClassName('edit-drink')
         this.body.addEventListener('click', this.sortRecipes)
+        this.updateRecipeName = document.getElementById("edit-recipe-name")
+        this.updateRecipeBody = document.getElementById("edit-recipe-body")
+        this.updateRecipeForm.addEventListener('submit', this.updateRecipe.bind(this))
         
         // var recipeID = this.recipesContainer.queryselector('data-id')
         this.recipesContainer.addEventListener('click', this.deleteRecipe)
@@ -51,11 +54,13 @@ class Recipes{
         }
     }
     
-    updateRecipe = (e) => {
-        if (e.target.className == "edit-drink") {
-            let id = e.target.dataset.id
-            this.adapter.updateRecipe(id, updateName, updateBody)
-        }
+    updateRecipe(e) {
+        e,preventDefault()
+
+        const updateName = this.updateRecipeName
+        const updateBody = this.updateRecipeBody
+        this.adapter.updateRecipe(id, updateName, updateBody)
+ 
     }
 
     createRecipe(e) {
