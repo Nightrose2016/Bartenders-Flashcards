@@ -23,9 +23,9 @@
             </form> 
             
             <form id="editrecipeform" action="">
-                <button type="button" onclick="editrecipeform(0)" id="edit-update" value="Hide edit form">hide edit drink</button><br>
-                <h1>Edit Drink</h1>
-                Select drink to edit: <br>
+                <label for="drinks-li">Choose a drink to edit:</label>
+                <select id="drinks-li">
+                </select><br>
                 Update Drink Name:<input type="text" name="recipe-name" id="edit-recipe-name"><br>
                 Update Recipe Body:<input type="text" name="recipe-body" placeholder="Instructions" id="edit-recipe-body"><br>
                 <input type="submit" value="update recipe" id="update submit">
