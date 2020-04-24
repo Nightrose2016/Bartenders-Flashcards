@@ -51,17 +51,17 @@ class Recipes{
     }
     
     updateRecipe(e) {
-        e,preventDefault()
-        // const id = "this will be added later"
-        const updateName = this.updateRecipeName
-        const updateBody = this.updateRecipeBody
-        this.adapter.updateRecipe(id, updateName, updateBody)
-        .then(recipe => {
-            this.recipes.push()
-            this.updateRecipeName = ''
-            this.updateRecipeBody = ''
-            this.renderfull()
-        })
+    //     // e,preventDefault()
+    //     // const id = "this will be added later"
+    //     const updateName = this.updateRecipeName
+    //     const updateBody = this.updateRecipeBody
+    //     this.adapter.updateRecipe(id, updateName, updateBody)
+    //     .then(recipe => {
+    //         this.recipes.push()
+    //         this.updateRecipeName = ''
+    //         this.updateRecipeBody = ''
+    //         this.renderfull()
+    //     })
     }
 
     createRecipe(e) {
@@ -90,5 +90,7 @@ class Recipes{
 
     renderfull() {
         this.recipesContainer.innerHTML = this.recipes.map(recipe => recipe.renderDIV()).join('')
+        
     }
+
 }
