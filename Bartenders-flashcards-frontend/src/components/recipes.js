@@ -76,14 +76,14 @@ class Recipes{
             this.newRecipeName.value = '' 
             this.newRecipeBody.value = '' 
             this.renderfull() 
-        }) ;     
+        }) ;
         console.log('your drink is being made')
     }
 
     fetchAndLoadRecipes = () => {
         this.adapter.getRecipes()
-        .then((resp) => {
-            this.recipes = resp.map((obj) => new Recipe(obj))
+        .then((recipes) => {
+            this.recipes = recipes.map((recipe) => new Recipe(recipe))
             this.renderfull()
         }) ;
     }
