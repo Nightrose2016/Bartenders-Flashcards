@@ -1,4 +1,11 @@
 body{
     background-color: black;
-    color: lightsteelblue;
+    color: aqua;
+
+}
+h3.drinks{
+    color: deeppink;
+}
+h1.new-drink{
+    color: gold;
 }

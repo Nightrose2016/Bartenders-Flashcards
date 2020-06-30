@@ -12,7 +12,7 @@ class Recipe {
     renderDIV() {
         console.log("recipes are being rendered") ;
         return `<div data-id=${this.id}>
-                <h3 data-name=${this.name}>${this.name}</h3>
+                <h3 class='drinks' data-name=${this.name}>${this.name}</h3>
                     <div class="drink-ingredients" data-id=${this.id}> ${this.ingredients().map(ingredient => ingredient.renderLI()).join('')}</div>
                 <p class="drink-instruction">${this.body}</p>
                 <button class="delete-drink" data-id=${this.id}> delete ${this.name} </button>
