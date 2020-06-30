@@ -76,7 +76,8 @@ class Recipes{
             this.newRecipeName.value = '' 
             this.newRecipeBody.value = '' 
             this.renderfull() 
-        }) ;
+        })
+
         console.log('your drink is being made')
     }
 
