@@ -77,8 +77,7 @@ class Recipes{
             this.newRecipeBody.value = '' 
             this.renderfull() 
         })
-
-        console.log('your drink is being made')
+        
     }
 
     fetchAndLoadRecipes = () => {

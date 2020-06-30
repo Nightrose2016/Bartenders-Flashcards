@@ -19,7 +19,6 @@ class Recipe {
                 </div>`
     }
     renderrecipeselection() {
-        console.log("recipes are being listed")
         return `<option value="${this.id}">${this.name}</option>`
     }
 }
